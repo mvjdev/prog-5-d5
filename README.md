@@ -80,6 +80,21 @@ Acteur principal : Utilisateur
 * 🌐 **Connectivité IoT** : notifications à distance pour la maintenance.
 
 ---
+
+
+### Séquence d’exécution
+
+```plaintext
+Utilisateur → MachineCafe.payer(montant)
+     ↳ Si paiement OK → afficher menu
+Utilisateur → MachineCafe.choisir_cafe(type)
+     ↳ Vérifie ressources
+     ↳ Si OK → MachineCafe.preparer_cafe()
+     ↳ Sinon → Erreur affichée
+Utilisateur ← reçoit le café
+```
+
+---
 ## 👤 Auteur
 
 Projet réalisé par **STD22082** dans le cadre du module **Prog5**
